@@ -1,15 +1,219 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="dark">
+
+    <!-- ===================== SEO: Basis ===================== -->
+    <title>Dennis Wach - Softwareentwickler (DevOps & CI/CD-Pipelines)</title>
+    <meta name="description"
+          content="Dennis Wach ist Softwareentwickler bei Finanz Informatik GmbH & Co. KG mit Fokus auf DevOps und CI/CD-Pipelines. Portfolio, Projekte und Kontakt.">
+    <meta name="author" content="Dennis Wach">
+    <meta name="keywords"
+          content="Softwareentwickler, DevOps, CI/CD, Pipelines, Software Engineer, Portfolio, Dennis Wach">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.wach.net/">
+
+    <!-- ===================== Favicon ===================== -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="images/profil.jpg">
+    <meta name="theme-color" content="#0172ad">
+
+    <!-- ===================== SEO: Open Graph (LinkedIn/Facebook) ===================== -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Dennis Wach">
+    <meta property="og:title" content="Dennis Wach - Softwareentwickler (DevOps & CI/CD-Pipelines)">
+    <meta property="og:description"
+          content="Softwareentwickler mit Fokus auf DevOps und CI/CD-Pipelines. Portfolio, Projekte und Kontakt.">
+    <meta property="og:url" content="https://www.wach.net/">
+    <meta property="og:image" content="https://www.wach.net/images/mtg.png">
+
+    <!-- ===================== SEO: Twitter Card ===================== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dennis Wach - Softwareentwickler (DevOps & CI/CD-Pipelines)">
+    <meta name="twitter:description"
+          content="Softwareentwickler mit Fokus auf DevOps und CI/CD-Pipelines. Portfolio, Projekte und Kontakt.">
+    <meta name="twitter:image" content="https://www.wach.net/images/mtg.png">
+
+    <!-- ===================== SEO: Strukturierte Daten (schema.org Person) ===================== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Dennis Wach",
+      "url": "https://www.wach.net/",
+      "image": "https://www.wach.net/images/profil.jpg",
+      "jobTitle": "Softwareentwickler (DevOps & CI/CD-Pipelines)",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Finanz Informatik GmbH & Co. KG"
+      },
+      "knowsAbout": ["DevOps", "CI/CD", "Pipelines", "Softwareentwicklung", "Automatisierung"],
+      "sameAs": [
+        "https://www.linkedin.com/in/denniswach/"
+      ]
+    }
+    </script>
+
     <link rel="stylesheet" href="css/pico.min.css">
-    <title>Meine Website!</title>
+    <style>
+      :root { --pico-typography-spacing-vertical: 1.4rem; }
+      body { display: flex; flex-direction: column; min-height: 100vh; }
+      main { flex: 1 0 auto; }
+
+      .hero { padding: 2.5rem 0 1rem; }
+      .hero .eyebrow {
+        text-transform: uppercase;
+        letter-spacing: .12em;
+        font-size: .8rem;
+        color: var(--pico-muted-color);
+        margin-bottom: .5rem;
+      }
+      .hero h1 { margin-bottom: .4rem; line-height: 1.1; }
+      .hero .lead { font-size: 1.15rem; color: var(--pico-muted-color); max-width: 42rem; }
+
+      .actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem; }
+      .actions a[role="button"] { margin: 0; }
+
+      .project-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        align-items: center;
+      }
+      @media (min-width: 768px) {
+        .project-grid { grid-template-columns: 1.1fr 1fr; }
+      }
+      .project-grid img {
+        border-radius: var(--pico-border-radius);
+        border: 1px solid var(--pico-card-border-color);
+        width: 100%;
+        height: auto;
+      }
+      .tags { display: flex; flex-wrap: wrap; gap: .4rem; margin: .75rem 0 1rem; padding: 0; list-style: none; }
+      .tags li {
+        list-style: none;
+        font-size: .8rem;
+        padding: .2rem .6rem;
+        border-radius: 999px;
+        background: var(--pico-card-sectioning-background-color);
+        border: 1px solid var(--pico-card-border-color);
+        color: var(--pico-muted-color);
+      }
+      .tags li::marker { content: ""; }
+      footer.container { color: var(--pico-muted-color); font-size: .9rem; padding-block: 2rem; }
+      .visually-hidden {
+        position: absolute; width: 1px; height: 1px;
+        padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+      }
+    </style>
   </head>
+
   <body>
     <main class="container">
-      <h1>Meine Website!</h1>
+
+      <!-- ===================== Hero / Über mich ===================== -->
+      <header class="hero">
+        <p class="eyebrow">Portfolio</p>
+        <h1>Dennis Wach</h1>
+        <p class="lead">
+          Softwareentwickler bei <strong>Finanz Informatik GmbH & Co. KG</strong> mit Fokus auf
+          <strong>DevOps</strong> und <strong>CI/CD-Pipelines</strong>.
+          Ich automatisiere Build-, Test- und Deployment-Prozesse, damit Software
+          schnell, zuverlässig und wiederholbar ausgeliefert wird.
+        </p>
+        <p class="lead" style="margin-top:1rem">
+          Aktuell <strong><span id="age">…</span> Jahre alt</strong> und mit Begeisterung dabei,
+          Entwicklungs-Workflows besser zu machen.
+        </p>
+
+        <div class="actions">
+          <a href="https://www.linkedin.com/in/denniswach/"
+             role="button"
+             target="_blank"
+             rel="noopener noreferrer me">
+            LinkedIn-Profil
+          </a>
+          <a href="#projekte" role="button" class="secondary outline">Projekte ansehen</a>
+        </div>
+      </header>
+
+      <!-- ===================== Schwerpunkte ===================== -->
+      <section aria-labelledby="schwerpunkte-titel">
+        <h2 id="schwerpunkte-titel">Schwerpunkte</h2>
+        <ul class="tags">
+          <li>CI/CD</li>
+          <li>DevOps</li>
+          <li>Pipelines</li>
+          <li>Automatisierung</li>
+          <li>Softwareentwicklung</li>
+        </ul>
+      </section>
+
+      <!-- ===================== Projekte ===================== -->
+      <section id="projekte" aria-labelledby="projekte-titel">
+        <h2 id="projekte-titel">Projekte</h2>
+
+        <article class="project-grid">
+          <a href="https://mtg.wach.net" target="_blank" rel="noopener noreferrer">
+            <img src="images/mtg.png"
+                 alt="Screenshot der MTG Commander Game Stats App: Draft-Games anlegen und Spieler-Statistiken">
+          </a>
+          <div>
+            <h3 style="margin-top:0">MTG Commander Game Stats</h3>
+            <p>
+              Eine Web-App zum Erfassen und Auswerten von <em>Magic: The Gathering</em>
+              Commander-Partien. Nutzer legen Draft-Games an, pflegen Ergebnisse und sehen
+              ausgewertete Spieler-Statistiken - inklusive Win-Share-Auswertung pro Jahr
+              und Pod-Größe.
+            </p>
+            <ul class="tags">
+              <li>JavaScript</li>
+              <li>Datenauswertung</li>
+              <li>Web-App</li>
+            </ul>
+            <a href="https://mtg.wach.net" role="button" target="_blank" rel="noopener noreferrer">
+              Projekt ansehen
+            </a>
+          </div>
+        </article>
+      </section>
+
+      <!-- ===================== Kontakt ===================== -->
+      <section aria-labelledby="kontakt-titel">
+        <h2 id="kontakt-titel">Kontakt</h2>
+        <p>
+          Am besten erreichst du mich über
+          <a href="https://www.linkedin.com/in/denniswach/"
+             target="_blank" rel="noopener noreferrer me">LinkedIn</a>.
+        </p>
+      </section>
+
     </main>
+
+    <footer class="container">
+      <p>© <span id="year"></span> Dennis Wach · Softwareentwickler (DevOps & CI/CD)</p>
+    </footer>
+
+    <script>
+      // Alter automatisch aus dem Geburtsdatum berechnen (07.05.1998)
+      (function () {
+        const birth = new Date(1998, 4, 7); // Monat ist 0-basiert: 4 = Mai
+        const today = new Date();
+        let age = today.getFullYear() - birth.getFullYear();
+        const hadBirthday =
+          today.getMonth() > birth.getMonth() ||
+          (today.getMonth() === birth.getMonth() && today.getDate() >= birth.getDate());
+        if (!hadBirthday) age--;
+
+        const ageEl = document.getElementById("age");
+        if (ageEl) ageEl.textContent = age;
+
+        const yearEl = document.getElementById("year");
+        if (yearEl) yearEl.textContent = today.getFullYear();
+      })();
+    </script>
   </body>
 </html>
